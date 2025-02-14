@@ -1,0 +1,251 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    letter-spacing: .03vw;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+/* Editable variables for logo box position and size */
+:root {
+    --logo-box-top: 58px; /* Vertical position of the logo box */
+    --logo-box-right: 390px; /* Horizontal position (50% centers it) */
+    --logo-box-padding: 10px; /* Padding around the logo */
+    --logo-box-width: 90px; /* Width of the logo box */
+    --logo-box-height: 90px; /* Height of the logo box */
+    --logo-box-bg-color: rgba(0, 0, 0, 0.514); /* Background color of the logo box */
+    --logo-box-border-radius: 8px; /* Border radius for rounded corners */
+    --logo-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Shadow around the logo box */
+
+    /* Editable variables for each status box size and font/icon size */
+    --wallet-width: 100px;
+    --wallet-height: 20px;
+    --wallet-font-size: 0.85em;
+    --wallet-icon-size: 1.2em;
+
+    --bank-width: 100px;
+    --bank-height: 20px;
+    --bank-font-size: 0.85em;
+    --bank-icon-size: 1.2em;
+
+    --job-width: 100px;
+    --job-height: 20px;
+    --job-font-size: 0.85em;
+    --job-icon-size: 1.2em;
+
+    --id-width: 100px;
+    --id-height: 20px;
+    --id-font-size: 0.85em;
+    --id-icon-size: 1.2em;
+
+    --discord-width: 250px;
+    --discord-height: 20px;
+    --discord-font-size: 0.85em;
+    --discord-icon-size: 1.2em;
+}
+
+/* Server logo box styling */
+.server-logo {
+    position: absolute;
+    top: var(--logo-box-top);
+    right: var(--logo-box-right);
+    transform: translateX(50%);
+    z-index: 10001;
+    visibility: visible;
+    display: block;
+    padding: var(--logo-box-padding);
+    background: var(--logo-box-bg-color);
+    border-radius: var(--logo-box-border-radius);
+    box-shadow: var(--logo-box-shadow);
+    width: var(--logo-box-width);
+    height: var(--logo-box-height);
+    text-align: center;
+}
+
+/* Server logo image styling */
+.server-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* All status section (wallet, bank, job, etc.) */
+.allstatus {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 10px;
+    position: absolute;
+    top: 42.5px;
+    right: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Styling for each element in the status section (wallet, bank, job, etc.) */
+.wallet, .bank, .job, .id, .discord {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5em 1.5em;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--wallet-font-size);
+    letter-spacing: normal;
+    cursor: default;
+    border: none;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+    background: #00000073;
+    color: #ffffffee;
+    visibility: visible;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    width: var(--wallet-width); /* Set width */
+    height: var(--wallet-height); /* Set height */
+}
+
+/* Styling for each element (bank, job, etc.) with individual width, height, font size, and icon size */
+.wallet {
+    font-size: var(--wallet-font-size);
+    width: var(--wallet-width);
+    height: var(--wallet-height);
+}
+
+.bank {
+    font-size: var(--bank-font-size);
+    width: var(--bank-width);
+    height: var(--bank-height);
+}
+
+.job {
+    font-size: var(--job-font-size);
+    width: var(--job-width);
+    height: var(--job-height);
+}
+
+.id {
+    font-size: var(--id-font-size);
+    width: var(--id-width);
+    height: var(--id-height);
+}
+
+.discord {
+    font-size: var(--discord-font-size);
+    width: var(--discord-width);
+    height: var(--discord-height);
+}
+
+/* Remove box-shadow on click */
+.wallet:active, .bank:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+
+/* Positioning for the icon inside each status item */
+.icon {
+    position: absolute;
+    left: 10px;
+    font-size: var(--wallet-icon-size); /* Icon size */
+}
+
+/* Color for the icons */
+.wallet i {
+    color: #28a745;
+}
+
+.bank i {
+    color: #00e1ff;
+}
+
+.job i {
+    color: #ffc107;
+}
+
+.id i {
+    color: #6f42c1;
+}
+
+/* Text for each status item (wallet, bank, job, etc.) */
+.dwallet, .dbank, .did, .djob, .discord-id {
+    font-weight: bold;
+    color: #ffffffee;
+    font-size: 0.7em;
+    text-align: center;
+    flex-grow: 1;
+    padding-left: 15px;
+}
+
+/* Hover effects for each status item */
+.wallet:hover, .bank:hover, .job:hover, .id:hover, .discord:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Enhance the titles slightly */
+.title {
+    font-size: 0.88em;
+    font-weight: bold;
+    color: #ffffffee;
+    margin-bottom: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Position items correctly within the grid */
+.id-job {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.wallet {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.bank {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/* Discord section */
+.discord {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+}
+
+/* Ensure Discord section visibility */
+.discord-id {
+    visibility: visible;
+}
+
+/*
+
+
+/* Hide elements properly when HUD is not visible */
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+
+/* Reset server-logo visibility */
+.server-logo.hidden {
+    visibility: hidden !important;
+    display: none !important;
+}
+
+/* Add subtle visibility when showing HUD */
+.showHUD {
+    visibility: visible !important;
+    display: block !important;
+    box-shadow: none !important;
+}
