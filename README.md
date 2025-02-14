@@ -54,3 +54,5 @@ The HUD displays key information in a simple and clean layout, as shown below:
 ---
 
 
+For any support or help join https://discord.gg/6fWcYXEgHY
+
