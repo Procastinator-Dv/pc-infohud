@@ -1,3 +1,5 @@
+print("^1pc-businessmenudisplay by Procastinator V.1.0^7")
+
 QBCore = exports["qb-core"]:GetCoreObject()
 local PlayerData = QBCore.Functions.GetPlayerData()
 
