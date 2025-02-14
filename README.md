@@ -1,9 +1,5 @@
 # Procastinator HUD
 
-Thanks for sharing the image! Based on this HUD design, here’s an updated **README** tailored to include HUD components similar to what you shared:
-
----
-
 # **Custom Info HUD for QBCore**
 
 A sleek and informative HUD for QBCore-based FiveM servers. This HUD provides key player information in an organized and visually appealing layout, perfect for enhancing immersion in roleplay scenarios.
