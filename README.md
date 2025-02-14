@@ -47,7 +47,8 @@ A sleek and informative HUD for QBCore-based FiveM servers. This HUD provides ke
 ## **Preview**
 The HUD displays key information in a simple and clean layout, as shown below:
 
-*https://imgur.com/a/nbjIrSf*
+*![image](https://github.com/user-attachments/assets/4c85ac44-d99d-40f7-9765-52284de762ff)
+*
 
 ---
 
