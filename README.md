@@ -49,6 +49,7 @@ The HUD displays key information in a simple and clean layout, as shown below:
 
 *![image](https://github.com/user-attachments/assets/4c85ac44-d99d-40f7-9765-52284de762ff)
 *
+![image](https://github.com/user-attachments/assets/cc576427-e38f-4f4b-8b51-7f099af79886)
 
 ---
 
